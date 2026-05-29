@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16
+    container_name: nutrition-coach-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: nutrition_coach
+      POSTGRES_USER: nutrition
+      POSTGRES_PASSWORD: nutrition123
+    ports:
+      - "5432:5432"
+    volumes:
+      - nutrition_coach_pgdata:/var/lib/postgresql/data
+
+volumes:
+  nutrition_coach_pgdata:

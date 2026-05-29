@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: nutrition-coach-backend
+
+  profiles:
+    active: postgres
+
+server:
+  port: 8080
+  address: 0.0.0.0
+
+app:
+  jwt:
+    secret: "nutrition-coach-super-secret-key-change-me-please"
+    expiration-ms: 86400000
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /v3/api-docs
