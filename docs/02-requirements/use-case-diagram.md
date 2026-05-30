@@ -1,6 +1,6 @@
 # Use Case Diagram
 
-![Use Case Diagram](../images/buc-diagram.png)
+![Use Case Diagram](../images/Use_case_диаграмма.png)
 
 ## Акторы
 - USER
