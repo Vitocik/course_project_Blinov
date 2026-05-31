@@ -28,7 +28,6 @@ ngrok http 8080
 3. Скопируй выданный `https://...ngrok-free.app` адрес.
 4. В приложении укажи его в поле `API URL`.
 
-Если хочешь сделать адрес дефолтным для APK, добавь `EXPO_PUBLIC_API_URL` в mobile/.env и пересобери приложение.
 
 ## Swagger
 

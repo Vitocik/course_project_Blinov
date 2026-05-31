@@ -1,13 +1,41 @@
-# Documentation Index
+# Документация проекта Nutrition Coach
 
-- `01-business-model/`
-- `02-requirements/`
-- `03-architecture/`
-- `04-database/`
-- `05-design/`
-- `06-implementation/`
-- `07-ui/`
-- `08-final/`
+Ниже приведена целевая структура папки `docs/` для курсовой работы.  
+Разделы распределены по этапам жизненного цикла проекта — от паспорта проекта до итогового отчёта.
 
-## Images
-Все рисунки и скриншоты хранятся в `docs/images/`.
+## Структура документации
+
+- `00-project-charter/` — паспорт проекта, контекст, BUC, SWOT, ROI, глоссарий
+- `01-requirements/` — use case, доменная модель, трассировка требований
+- `02-architecture/` — архитектура PCMEF, ADR, интерфейсы
+- `03-database/` — ER-диаграмма, DDL, описание ORM
+- `04-detailed-design/` — sequence-диаграммы, спецификация методов
+- `05-implementation/` — реализация слоёв и структура кода
+- `06-testing/` — тест-план, JaCoCo, Postman
+- `07-refactoring/` — code smells и проведённые улучшения
+- `08-ui/` — скриншоты интерфейсов и UI-описание
+- `09-api/` — OpenAPI, Swagger и описание эндпоинтов
+- `10-deployment/` — Docker, CI/CD и инструкции по развёртыванию
+- `11-user-guide/` — руководство пользователя
+- `12-final-report/` — финальные материалы курсовой, презентация, пояснительная записка
+
+## Примечание по изображениям
+
+Графические материалы и схемы хранятся в `docs/images/` и используются из markdown-файлов через относительные ссылки.
+
+## Как читать документацию
+
+Рекомендуемый порядок просмотра:
+1. `00-project-charter/`
+2. `01-requirements/`
+3. `02-architecture/`
+4. `03-database/`
+5. `04-detailed-design/`
+6. `05-implementation/`
+7. `06-testing/`
+8. `07-refactoring/`
+9. `08-ui/`
+10. `09-api/`
+11. `10-deployment/`
+12. `11-user-guide/`
+13. `12-final-report/`
