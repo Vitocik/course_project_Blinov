@@ -104,18 +104,17 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.12</version>
+                <version>0.8.13</version>
+
                 <executions>
+
                     <execution>
                         <id>prepare-agent</id>
                         <goals>
                             <goal>prepare-agent</goal>
                         </goals>
-                        <configuration>
-                            <propertyName>surefireArgLine</propertyName>
-                            <destFile>${project.build.directory}/jacoco.exec</destFile>
-                        </configuration>
                     </execution>
+
                     <execution>
                         <id>report</id>
                         <phase>verify</phase>
@@ -123,12 +122,14 @@
                             <goal>report</goal>
                         </goals>
                     </execution>
+
                     <execution>
                         <id>check</id>
                         <phase>verify</phase>
                         <goals>
                             <goal>check</goal>
                         </goals>
+
                         <configuration>
                             <rules>
                                 <rule>
@@ -144,6 +145,7 @@
                             </rules>
                         </configuration>
                     </execution>
+
                 </executions>
             </plugin>
 
@@ -153,8 +155,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.3</version>
                 <configuration>
-                    <argLine>${surefireArgLine}</argLine>
                     <useModulePath>false</useModulePath>
+                    <argLine>${argLine}</argLine>
                 </configuration>
             </plugin>
 
