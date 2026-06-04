@@ -979,7 +979,7 @@ function Header({ theme, loadingSync = false }: { theme: ReturnType<typeof getTh
         </View>
         <View style={{ flex: 1 }}>
           <Text style={[styles.appTitle, { color: theme.text }]}>Nutrition Coach</Text>
-          <Text style={[styles.subtitle, { color: theme.muted }]}>Современная курсовая по питанию и тренировкам</Text>
+          <Text style={[styles.subtitle, { color: theme.muted }]}></Text>
           <View style={styles.headerMetaRow}>
             <StatusPill theme={theme} text={currentUserLabel} tone="neutral" />
             <StatusPill theme={theme} text={isDemoMode ? 'Демо' : 'Сервер'} tone={isDemoMode ? 'warning' : 'success'} />
@@ -1038,7 +1038,6 @@ function AuthScreen({
             </View>
             <View style={{ flex: 1 }}>
               <Text style={[styles.title, { color: theme.text }]}>Вход в приложение</Text>
-              <Text style={[styles.subtitle, { color: theme.muted }]}>Можно подключиться к backend или открыть демо-режим.</Text>
             </View>
           </View>
 
@@ -1062,9 +1061,6 @@ function AuthScreen({
 
           <View style={styles.authMetaCard}>
             <StatusPill theme={theme} text={apiStatus} tone="neutral" />
-            <Text style={[styles.small, { color: theme.muted, marginTop: 8 }]}>
-              Для Android-эмулятора обычно используется 10.0.2.2, для физического телефона — IP компьютера или ngrok-адрес.
-            </Text>
           </View>
         </Card>
       </ScrollView>
