@@ -36,7 +36,7 @@
 - Spring Data JPA
 - JWT Authentication
 - PostgreSQL
-- H2 Database dependencies are included in the project, but основной профиль сейчас ориентирован на PostgreSQL
+- H2 Database dependencies
 - Maven
 - Swagger / OpenAPI
 - JaCoCo
