@@ -1,0 +1,53 @@
+# =========================
+# React Native / Expo
+# =========================
+
+mobile/node_modules/
+mobile/.expo/
+mobile/.expo-shared/
+mobile/android/
+mobile/ios/
+mobile/dist/
+mobile/web-build/
+
+# =========================
+# Maven / Java
+# =========================
+
+backend/target/
+**/target/
+
+# =========================
+# Local databases
+# =========================
+
+backend/data/
+*.db
+*.trace.db
+
+# =========================
+# Logs
+# =========================
+
+*.log
+npm-debug.log*
+
+# =========================
+# IDE
+# =========================
+
+.idea/
+.vscode/
+
+# =========================
+# OS
+# =========================
+
+.DS_Store
+Thumbs.db
+
+# =========================
+# Environment
+# =========================
+
+.env

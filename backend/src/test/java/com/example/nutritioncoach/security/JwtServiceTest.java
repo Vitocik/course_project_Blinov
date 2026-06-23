@@ -1,0 +1,73 @@
+package com.example.nutritioncoach.security;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class JwtServiceTest {
+
+    @Test
+    void shouldGenerateAndValidateToken() {
+        JwtService jwtService = new JwtService(
+                "abcdefghijklmnopqrstuvwxyz0123456789",
+                60_000
+        );
+
+        String token = jwtService.generateToken(
+                "user@mail.com",
+                "USER"
+        );
+
+        assertNotNull(token);
+        assertTrue(jwtService.isValid(token));
+        assertEquals(
+                "user@mail.com",
+                jwtService.getSubject(token)
+        );
+        assertEquals(
+                "USER",
+                jwtService.parseClaims(token)
+                        .get("role", String.class)
+        );
+    }
+
+    @Test
+    void shouldRejectMalformedToken() {
+        JwtService jwtService = new JwtService(
+                "abcdefghijklmnopqrstuvwxyz0123456789",
+                60_000
+        );
+
+        assertFalse(jwtService.isValid("not-a-token"));
+    }
+
+    @Test
+    void shouldGenerateTokenWithShortSecret() {
+        JwtService jwtService = new JwtService(
+                "short-secret",
+                60_000
+        );
+
+        String token = jwtService.generateToken(
+                "short@mail.com",
+                "USER"
+        );
+
+        assertNotNull(token);
+        assertTrue(jwtService.isValid(token));
+        assertEquals(
+                "short@mail.com",
+                jwtService.getSubject(token)
+        );
+    }
+
+    @Test
+    void shouldRejectEmptyToken() {
+        JwtService jwtService = new JwtService(
+                "abcdefghijklmnopqrstuvwxyz0123456789",
+                60_000
+        );
+
+        assertFalse(jwtService.isValid(""));
+    }
+}
